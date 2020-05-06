@@ -1,0 +1,14 @@
+{
+	"name": "dickpics",
+	"version": "1.0.0",
+	"description": "Photography site",
+	"main": "index.js",
+	"scripts": {
+    "sass": "node-sass -w scss -o dist/incs/css --recursive" 
+	},
+	"author": "Rocko aka Dick",
+	"license": "ISC",
+	"devDependencies": {
+		"node-sass": "^4.13.1"
+	}
+}

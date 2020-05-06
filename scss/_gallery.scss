@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand|Special+Elite&display=swap');
+
+* {
+	font-family: 'Quicksand', sans-serif;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	color: white;
+}
+.gal-options {
+	color: white;
+	cursor: pointer;
+	padding: 0 0.5rem;
+}
+.gal-container {
+	max-width: 1280px;
+	height: 100%;
+	padding: 2rem;
+	margin: auto;
+	overflow: hidden;
+}
+#display-image {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100vw; /* Full width */
+	height: 100vh; /* Full height */
+	overflow: hidden; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.86); /* Black w/ opacity */
+	.gal-container {
+		display: grid;
+		grid-template-rows: 5% 80% 1fr;
+		#gal-header {
+			color: white;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+
+			#gal-closer {
+				cursor: pointer;
+				scale: 1;
+				transition: all 0.5s ease;
+
+				&:hover {
+					scale: 2;
+					color: #f81894;
+					font-weight: bold;
+				}
+			}
+
+			#gal-title {
+				font-size: 2rem;
+				color: #f81894;
+				padding: 0 1.5rem;
+				font-family: 'Special Elite', cursive;
+				border-bottom: 2px solid white;
+			}
+		}
+
+		#gal-img {
+			overflow: hidden;
+			text-align: center;
+			margin-top: 1rem;
+			.displayed-img {
+				height: 100%;
+				width: auto;
+			}
+		}
+
+		#control-info {
+			.gal-container {
+				display: grid;
+				grid-template-columns: 1fr 60% 1fr;
+				justify-items: center;
+
+				p {
+					text-align: center;
+					color: white;
+					font-size: 1rem;
+				}
+
+				img {
+					height: 100px;
+					width: 100px;
+					opacity: 1;
+					scale: 1;
+					cursor: pointer;
+					transition: all 0.5s ease;
+
+					&:hover {
+						opacity: .50;
+						scale: 1.16;
+					}
+				}
+			}
+		}
+	}
+}

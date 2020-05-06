@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand|Special+Elite&display=swap');
+
+@import "gallery";
+
+$accent-font: 'Special Elite', cursive;
+$body-font: 'Quicksand', sans-serif;
+$main-color: #f81894;
+$secondary-color: #7c16f8;
+$site-width: 1280px;
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: $body-font;
+}
+body {
+	background: #131313;
+}
+
+.container {
+	max-width: $site-width;
+	height: 100%;
+	padding: 1.5rem;
+	margin: auto;
+	overflow: hidden;
+}
+
+.logo {
+	height: 200px;
+	width: 200px;
+	margin-top: 1rem;
+}
+
+#main-nav {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+
+	ul {
+		list-style-type: none;
+		display: flex;
+		font-family: $accent-font;
+	}
+
+	li {
+		padding: 1rem 0.5rem;
+	}
+
+	a {
+		text-decoration: none;
+		color: #fff;
+		text-transform: uppercase;
+		padding-bottom: 0.5rem;
+		border-bottom: 3px transparent solid;
+		font-size: 2rem;
+		text-shadow: 2px 2px 5px #000;
+		transition: all 0.75s ease;
+		font-family: $accent-font;
+
+		&:hover {
+			border-color: $secondary-color;
+			color: $main-color;
+		}
+	}
+}
+
+#main-header {
+	background: url('../imgs/rocksterdam50.png') no-repeat top right /cover;
+	min-height: 115vh;
+
+	.header-info {
+		margin: 6% auto 0 auto;
+		color: #fff;
+		text-align: center;
+		font-family: $accent-font;
+		text-shadow: 2px 2px 3px#000;
+
+		h1 {
+			font-size: 5.5rem;
+			font-family: $accent-font;
+		}
+		p {
+			font-size: 3rem;
+			font-family: $accent-font;
+		}
+	}
+}
+
+#main-section {
+	width: 100%;
+	#main-info {
+		color: white;
+		font-family: $body-font;
+		font-size: 1.5rem;
+		padding: 2rem 3rem;
+		line-height: 1.5;
+
+		h2 {
+			font-family: $accent-font;
+			color: $main-color;
+		}
+		p {
+			padding: 0.75rem 0;
+		}
+	}
+	#main-images {
+		padding: 3rem;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		.image {
+			width: 225px;
+			height: 225px;
+			overflow: hidden;
+			display: flex;
+			justify-content: center;
+			margin: 0.5rem;
+			border: 4px solid white;
+			border-radius: 0.5rem;
+
+			img {
+				height: 350px;
+				margin: 0 auto;
+				text-align: center;
+				transition: all 1s;
+
+				&:hover {
+					height: 550px;
+					filter: blur(10px);
+				}
+			}
+		}
+	}
+}
+
+// Footer
+#main-footer {
+	.container {
+		display: grid;
+		grid-template-rows: 3fr 1fr;
+		#footer-nav {
+			display: flex;
+			width: 100%;
+			justify-content: space-between;
+			align-items: center;
+			ul {
+				list-style: none;
+				li {
+					display: inline;
+				}
+				a {
+					text-decoration: none;
+					color: white;
+					font-family: $body-font;
+					font-size: 1.26rem;
+					padding: 0 1.5rem;
+					transition: all 0.5s ease;
+
+					&:hover {
+						color: $main-color;
+					}
+				}
+			}
+			img {
+				height: 76px;
+				width: 76px;
+			}
+		}
+	}
+	p {
+		text-align: center;
+		color: white;
+		font-family: $body-font;
+		font-size: 0.76rem;
+	}
+}
+
+// contact
+
+#contact-form {
+	.container {
+		color: white;
+		form {
+			input[type=text],
+			select,
+			textarea {
+				width: 100%;
+				padding: 12px;
+				border: 1px solid #ccc;
+				border-radius: 4px;
+				box-sizing: border-box;
+				margin-top: 6px;
+				margin-bottom: 16px;
+				resize: vertical;
+			}
+			input[type=submit] {
+				background-color: $main-color;
+				font-family: $body-font;
+				color: white;
+				padding: 12px 20px;
+				border: none;
+				border-radius: 4px;
+				cursor: pointer;
+				transition: all 0.5s ease;
+			}
+
+			input[type=submit]:hover {
+				background-color: $secondary-color;
+			}
+		}
+	}
+}
+
+@import "media";
